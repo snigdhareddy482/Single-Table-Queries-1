@@ -1,0 +1,10 @@
+1)What manufacturers have had products sold in June of 2015? Only show manufacturer names. NOTE: Use date functions of "month" and "year" for your query.
+2)What were the category, productname, color, and item size of products manufactured by Converse and sold in 2014?
+3)Give all data for sales of more than $130.
+4)List all the information for each sale made to customer Stephen Liddle.
+5)What are the product names of boots size 12 and above sold in 2014? (Category names are not capitalized.)
+6)What were the sales prices of the product named hampton boots that have been sold? (Product names are not capitalized in the database.) Return only the sales prices.
+7)Which products were sold on the second of January of 2014? Only show product names.
+8)Give a list of customers' last and first names with the product names who have purchased boots priced $10 and under. (Category names are not capitalized.)
+9)Give first and last names of customers who have made purchases costing $120 or more but less than $130. Only show customer names. Do not use BETWEEN for this query. 
+10)What are the colors of sold products whose price is more than $100? Show only colors.
