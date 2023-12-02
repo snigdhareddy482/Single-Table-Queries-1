@@ -1,0 +1,32 @@
+Give an alphabetical list of manufacturers who have had products sold from June 1, 2015 through June 30, 2015 inclusive. Only show manufacturer names. NOTE: Do NOT use date functions. Use date literals to test for the range of dates.
+SELECT DISTINCT ManufacturerName
+FROM SimplifiedSales
+WHERE SaleDate >= '2015-06-01' AND SaleDate <= '2015-06-30'
+ORDER BY ManufacturerName;
+
+What are the names (first and last) of customers who have made purchases in June or December of 2015?
+Select distinct firstname, lastname from simplifiedsales where (month(SaleDate) = 6 or month(SaleDate) = 12) and year(SaleDate) = 2015
+
+Show all of the prices at which products manufactured by Keds have been sold. Sort in descending order by price. (Manufacturer names are capitalized in the database.) Only show product names and prices.
+Select distinct productname, price from simplifiedsales where manufacturername = 'Keds' order by price desc
+
+What are the prices of blue sandals and green sandals that have been sold? Show the various prices by color sorted with blue sandals first and then by descending price. (Colors are capitalized in the database.) Show only colors and prices.
+Select distinct color, price from simplifiedsales where category = 'sandals' and (color = 'blue' or color = 'green') order by color, price desc
+
+Give an alphabetical list of customers (first name then last name) who have purchased the product "mckinley boots" in 2014. Sort the list alphabetically by last name. (Product names are not capitalized in the database.) Return customer names only.
+select distinct firstname, lastname from simplifiedsales where productname = 'mckinley boots' and year(saledate) = 2014 order by lastname
+
+List the manufacturers of products with a category of sandals or slippers that sold in June of 2015. (Categories are not capitalized in the database.) Only show manufacturer names.
+Select distinct manufacturername from simplifiedsales where (category = 'sandals' or category = 'slippers') and month(SaleDate) = 6 and Year(SaleDate) = 2015
+
+Create an alphabetical list of names of all sold products whose price is more than $120. Return product names only.
+Select distinct ProductName from SimplifiedSales where price > 120 order by ProductName
+
+List all the sold products and their prices of the products that are red or orange and cost $60 or more. (Colors are capitalized in the database.) Show product names and prices.
+Select distinct productname, price from simplifiedsales where (color = 'Red' or color = 'Orange') and price >= 60
+
+Which customers have purchased green sneakers (category) or products from Bearpaw? (Categories are not capitalized; manufacturer names are capitalized.) Show customer first and last names.
+Select distinct firstname, lastname from simplifiedsales where (color = 'green' and category = 'sneakers') or ManufacturerName = 'Bearpaw'
+
+List names of all sold products that are blue or green. (Colors are capitalized in the database, i.e., "Blue".) Return product names only.
+Select distinct productname from SimplifiedSales where color = 'Blue' or color ='Green'
